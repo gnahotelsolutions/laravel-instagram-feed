@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed;
+namespace GNAHotelSolutions\InstagramFeed;
 
 
-use Dymantic\InstagramFeed\Commands\CreateBasicProfile;
-use Dymantic\InstagramFeed\Commands\RefreshAuthorizedFeeds;
-use Dymantic\InstagramFeed\Commands\RefreshTokens;
+use GNAHotelSolutions\InstagramFeed\Commands\CreateBasicProfile;
+use GNAHotelSolutions\InstagramFeed\Commands\RefreshAuthorizedFeeds;
+use GNAHotelSolutions\InstagramFeed\Commands\RefreshTokens;
 use GuzzleHttp\Client;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;

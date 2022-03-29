@@ -1,8 +1,8 @@
 <?php
 
-namespace Dymantic\InstagramFeed\Tests;
+namespace GNAHotelSolutions\InstagramFeed\Tests;
 
-use Dymantic\InstagramFeed\InstagramFeedServiceProvider;
+use GNAHotelSolutions\InstagramFeed\InstagramFeedServiceProvider;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Foundation\Exceptions\Handler;

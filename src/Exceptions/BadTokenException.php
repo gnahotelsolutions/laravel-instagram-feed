@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed\Exceptions;
+namespace GNAHotelSolutions\InstagramFeed\Exceptions;
 
 
 class BadTokenException extends \Exception

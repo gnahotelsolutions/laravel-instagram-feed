@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed;
+namespace GNAHotelSolutions\InstagramFeed;
 
 
-use Dymantic\InstagramFeed\Exceptions\AccessTokenRequestException;
-use Dymantic\InstagramFeed\Exceptions\RequestTokenException;
+use GNAHotelSolutions\InstagramFeed\Exceptions\AccessTokenRequestException;
+use GNAHotelSolutions\InstagramFeed\Exceptions\RequestTokenException;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
@@ -16,10 +16,10 @@ use Illuminate\Support\Str;
 
 class Profile extends Model
 {
-    const CACHE_KEY_BASE = 'dymantic_instagram_feed';
-    protected $table = 'dymantic_instagram_basic_profiles';
-
+    const CACHE_KEY_BASE = 'instagram_feed';
     protected $guarded = [];
+    protected $table = 'instagram_basic_profiles';
+    protected $connection = 'instagram';
 
     public function cacheKey()
     {

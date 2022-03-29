@@ -1,6 +1,6 @@
 <?php
 
-namespace Dymantic\InstagramFeed\Exceptions;
+namespace GNAHotelSolutions\InstagramFeed\Exceptions;
 
 class RequestTokenException extends \Exception
 {

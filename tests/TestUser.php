@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed\Tests;
+namespace GNAHotelSolutions\InstagramFeed\Tests;
 
 
 use Illuminate\Database\Eloquent\Model;

@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed\Commands;
+namespace GNAHotelSolutions\InstagramFeed\Commands;
 
 
-use Dymantic\InstagramFeed\Profile;
+use GNAHotelSolutions\InstagramFeed\Profile;
 use Illuminate\Console\Command;
 
 class CreateBasicProfile extends Command

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed;
+namespace GNAHotelSolutions\InstagramFeed;
 
 
 use Exception;

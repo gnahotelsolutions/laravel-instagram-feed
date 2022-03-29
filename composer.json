@@ -1,5 +1,5 @@
 {
-  "name": "dymantic/laravel-instagram-feed",
+  "name": "gnahotelsolutions/laravel-instagram-feed",
   "description": "Fetches the instagram feed for given authenticated profiles",
   "type": "library",
   "license": "MIT",
@@ -25,18 +25,18 @@
   },
   "autoload": {
     "psr-4": {
-      "Dymantic\\InstagramFeed\\": "src"
+      "GNAHotelSolutions\\InstagramFeed\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Dymantic\\InstagramFeed\\Tests\\": "tests"
+      "GNAHotelSolutions\\InstagramFeed\\Tests\\": "tests"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Dymantic\\InstagramFeed\\InstagramFeedServiceProvider"
+        "GNAHotelSolutions\\InstagramFeed\\InstagramFeedServiceProvider"
       ]
     }
   },

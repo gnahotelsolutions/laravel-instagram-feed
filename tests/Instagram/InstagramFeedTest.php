@@ -1,12 +1,12 @@
 <?php
 
-namespace Dymantic\InstagramFeed\Tests\Instagram;
+namespace GNAHotelSolutions\InstagramFeed\Tests\Instagram;
 
-use Dymantic\InstagramFeed\AccessToken;
-use Dymantic\InstagramFeed\InstagramFeed;
-use Dymantic\InstagramFeed\InstagramMedia;
-use Dymantic\InstagramFeed\Profile;
-use Dymantic\InstagramFeed\Tests\TestCase;
+use GNAHotelSolutions\InstagramFeed\AccessToken;
+use GNAHotelSolutions\InstagramFeed\InstagramFeed;
+use GNAHotelSolutions\InstagramFeed\InstagramMedia;
+use GNAHotelSolutions\InstagramFeed\Profile;
+use GNAHotelSolutions\InstagramFeed\Tests\TestCase;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 

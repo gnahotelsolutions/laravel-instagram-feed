@@ -1,11 +1,11 @@
 <?php
 
-namespace Dymantic\InstagramFeed\Tests\Tokens;
+namespace GNAHotelSolutions\InstagramFeed\Tests\Tokens;
 
-use Dymantic\InstagramFeed\AccessToken;
-use Dymantic\InstagramFeed\Profile;
-use Dymantic\InstagramFeed\Tests\FakesInstagramCalls;
-use Dymantic\InstagramFeed\Tests\TestCase;
+use GNAHotelSolutions\InstagramFeed\AccessToken;
+use GNAHotelSolutions\InstagramFeed\Profile;
+use GNAHotelSolutions\InstagramFeed\Tests\FakesInstagramCalls;
+use GNAHotelSolutions\InstagramFeed\Tests\TestCase;
 
 class AccessTokenTest extends TestCase
 {

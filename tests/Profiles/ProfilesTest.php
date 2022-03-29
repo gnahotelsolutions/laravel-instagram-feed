@@ -1,16 +1,16 @@
 <?php
 
-namespace Dymantic\InstagramFeed\Tests\Profiles;
+namespace GNAHotelSolutions\InstagramFeed\Tests\Profiles;
 
-use Dymantic\InstagramFeed\AccessToken;
-use Dymantic\InstagramFeed\Exceptions\AccessTokenRequestException;
-use Dymantic\InstagramFeed\Exceptions\RequestTokenException;
-use Dymantic\InstagramFeed\Instagram;
-use Dymantic\InstagramFeed\InstagramFeed;
-use Dymantic\InstagramFeed\Profile;
-use Dymantic\InstagramFeed\SimpleClient;
-use Dymantic\InstagramFeed\Tests\FakesInstagramCalls;
-use Dymantic\InstagramFeed\Tests\TestCase;
+use GNAHotelSolutions\InstagramFeed\AccessToken;
+use GNAHotelSolutions\InstagramFeed\Exceptions\AccessTokenRequestException;
+use GNAHotelSolutions\InstagramFeed\Exceptions\RequestTokenException;
+use GNAHotelSolutions\InstagramFeed\Instagram;
+use GNAHotelSolutions\InstagramFeed\InstagramFeed;
+use GNAHotelSolutions\InstagramFeed\Profile;
+use GNAHotelSolutions\InstagramFeed\SimpleClient;
+use GNAHotelSolutions\InstagramFeed\Tests\FakesInstagramCalls;
+use GNAHotelSolutions\InstagramFeed\Tests\TestCase;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Artisan;

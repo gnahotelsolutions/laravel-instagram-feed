@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed\Commands;
+namespace GNAHotelSolutions\InstagramFeed\Commands;
 
 
-use Dymantic\InstagramFeed\AccessToken;
-use Dymantic\InstagramFeed\Instagram;
-use Dymantic\InstagramFeed\Profile;
+use GNAHotelSolutions\InstagramFeed\AccessToken;
+use GNAHotelSolutions\InstagramFeed\Instagram;
+use GNAHotelSolutions\InstagramFeed\Profile;
 use Illuminate\Console\Command;
 
 class RefreshTokens extends Command

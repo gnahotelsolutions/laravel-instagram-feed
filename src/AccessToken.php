@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed;
+namespace GNAHotelSolutions\InstagramFeed;
 
 
 use Illuminate\Database\Eloquent\Model;
@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class AccessToken extends Model
 {
     protected $guarded = [];
-
-    protected $table = 'dymantic_instagram_feed_tokens';
+    protected $table = 'instagram_feed_tokens';
+    protected $connection = 'instagram';
 
     /**
      * @param $profile

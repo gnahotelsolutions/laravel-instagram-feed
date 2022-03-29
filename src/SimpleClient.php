@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Dymantic\InstagramFeed;
+namespace GNAHotelSolutions\InstagramFeed;
 
 
-use Dymantic\InstagramFeed\Exceptions\BadTokenException;
-use Dymantic\InstagramFeed\Exceptions\HttpException;
+use GNAHotelSolutions\InstagramFeed\Exceptions\BadTokenException;
+use GNAHotelSolutions\InstagramFeed\Exceptions\HttpException;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\RequestOptions;
 use Illuminate\Support\Facades\Http;

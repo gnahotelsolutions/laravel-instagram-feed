@@ -101,14 +101,14 @@ return [
 
 ### Profiles
 
-This package provides a `Dymantic\InstagramFeed\Profile` model which corresponds to an Instagram profile/account. You will need to create a profile for each feed you intend to use in your app/site. Once a profile has been created, you will need to authorize the profile before you can fetch its feed.
+This package provides a `GNAHotelSolutions\InstagramFeed\Profile` model which corresponds to an Instagram profile/account. You will need to create a profile for each feed you intend to use in your app/site. Once a profile has been created, you will need to authorize the profile before you can fetch its feed.
 
 #### Creating profiles
 
 You may create profiles programmatically in your code as follows. All you need is to provide a unique username for the profile. This **does not** have to match an Instagram username, it can be any name you wish to use to refer to the profile.
 
 ```php
-$profile = \Dymantic\InstagramFeed\Profile::new('my profile');
+$profile = \GNAHotelSolutions\InstagramFeed\Profile::new('my profile');
 ```
 
 Having just a single profile for a project is a fairly common use case, so this package includes an artisan command to quickly create a profile, so that you don't need to build out the necessary UI for your users to do so. Running `php artisan instagram-feed:profile {username}` will create a profile with that username, that you may then use as desired.
@@ -128,13 +128,13 @@ The long lived access tokens for the API expire after 60 days. This package incl
 Once your profile has been authenticated, you can retrieve the feed either directly from the `InstagramFeed` class, or by first getting the profile and calling the feed method on it.
 
 ```php
-$feed = \Dymantic\InstagramFeed\InstagramFeed::for('my profile');
+$feed = \GNAHotelSolutions\InstagramFeed\InstagramFeed::for('my profile');
 ```
 
 or
 
 ```php
-$profile = \Dymantic\InstagramFeed\Profile::for('my profile')
+$profile = \GNAHotelSolutions\InstagramFeed\Profile::for('my profile')
 $feed = $profile?->feed();
 ```
 
@@ -142,7 +142,7 @@ Once the feed is fetched, it will be cached forever and the same cached results 
 
 ##### Limiting the number of items in the feed
 
-By default, the number of items in the feed is 20. You may pass an optional integer parameter when getting your feed, as such: `\Dymantic\InstagramFeed\InstagramFeed::for('my profile', 15)` or `$profile?->feed(15)` to limit the feed to that amount.
+By default, the number of items in the feed is 20. You may pass an optional integer parameter when getting your feed, as such: `\GNAHotelSolutions\InstagramFeed\InstagramFeed::for('my profile', 15)` or `$profile?->feed(15)` to limit the feed to that amount.
 
 ##### Fetching all posts (no limit)
 
@@ -161,13 +161,13 @@ If you chose to ignore video, your feed size may be smaller than the limit you r
 You may refresh the feed similar to how you fetch the reed:
 
 ```php
-$feed = \Dymantic\InstagramFeed\InstagramFeed::for('my profile')->refresh();
+$feed = \GNAHotelSolutions\InstagramFeed\InstagramFeed::for('my profile')->refresh();
 ```
 
 or
 
 ```php
-$profile = \Dymantic\InstagramFeed\Profile::for('my profile')
+$profile = \GNAHotelSolutions\InstagramFeed\Profile::for('my profile')
 $feed = $profile?->refreshFeed();
 ```
 
@@ -180,7 +180,7 @@ Once you have a feed, you may send it to your view, where it may be iterated ove
 ```php
 // somewhere in a Controller
 public function show() {
-    $feed = \Dymantic\InstagramFeed\InstagramFeed::for('my profile');
+    $feed = \GNAHotelSolutions\InstagramFeed\InstagramFeed::for('my profile');
 
     return view('instagram-feed', ['instagram_feed' => $feed]);
 }

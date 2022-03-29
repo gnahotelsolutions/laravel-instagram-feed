@@ -11,9 +11,9 @@ There are four different things you need to do, or know about, to use this packa
 
 Profiles are there to represent Instagram users. Your database will need to store access tokens, and these profiles provide a place for that. All you need to care about is giving a profile a username that you can use to get the profile again when you need.
 
-There are two ways to create a profile. Either directly in your code `$profile = \Dymantic\InstagramFeed\Profile::create(['username' => 'michael'])` or you can use an artisan command `php artisan instagram-feed:profile michael`.
+There are two ways to create a profile. Either directly in your code `$profile = \GNAHotelSolutions\InstagramFeed\Profile::create(['username' => 'michael'])` or you can use an artisan command `php artisan instagram-feed:profile michael`.
 
-Then when you need to fetch the profile, you can use Eloquent as for any other model, for example `$profile = \Dymantic\InstagramFeed\Profile::where('username', 'michael')->first()`.
+Then when you need to fetch the profile, you can use Eloquent as for any other model, for example `$profile = \GNAHotelSolutions\InstagramFeed\Profile::where('username', 'michael')->first()`.
 
 ### Getting auth (The OAuth flow)
 
@@ -28,7 +28,7 @@ Route::get('instagram-get-auth', 'InstgramAuthController@show')->middleware('aut
 
 //in InsatgramAuthController.php
 public function show() {
-    $profile = \Dymantic\InstagramFeed\Profile::where('username', 'michael')->first();
+    $profile = \GNAHotelSolutions\InstagramFeed\Profile::where('username', 'michael')->first();
 
     return view('instagram-auth-page', ['instagram_auth_url' => $profile->getInstagramAuthUrl()]);
 }
@@ -101,7 +101,7 @@ Then, to finally show the feed, in the controller method for the view you are sh
 ```
 //HomePageController.php
 public function show() {
-    $feed = \Dymantic\InstagramFeed\Profile::where('username', 'michael')->first()->feed();
+    $feed = \GNAHotelSolutions\InstagramFeed\Profile::where('username', 'michael')->first()->feed();
 
     return view('home-page', ['instagram' => $feed]);
 }

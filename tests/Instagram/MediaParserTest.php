@@ -1,10 +1,10 @@
 <?php
 
-namespace Dymantic\InstagramFeed\Tests\Instagram;
+namespace GNAHotelSolutions\InstagramFeed\Tests\Instagram;
 
-use Dymantic\InstagramFeed\InstagramMedia;
-use Dymantic\InstagramFeed\MediaParser;
-use Dymantic\InstagramFeed\Tests\TestCase;
+use GNAHotelSolutions\InstagramFeed\InstagramMedia;
+use GNAHotelSolutions\InstagramFeed\MediaParser;
+use GNAHotelSolutions\InstagramFeed\Tests\TestCase;
 
 class MediaParserTest extends TestCase
 {

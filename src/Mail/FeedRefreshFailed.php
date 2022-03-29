@@ -1,6 +1,6 @@
 <?php
 
-namespace Dymantic\InstagramFeed\Mail;
+namespace GNAHotelSolutions\InstagramFeed\Mail;
 
 use Illuminate\Mail\Mailable;
 

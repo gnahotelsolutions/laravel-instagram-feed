@@ -11,7 +11,7 @@ use Illuminate\Console\Command;
 
 class RefreshTokens extends Command
 {
-    protected $signature = 'instagram-feed:refresh-tokens';
+    protected $signature = 'instagram-feed:refresh-tokens {username}';
 
     protected $description = 'Refresh long lived tokens so they do not expire';
 
@@ -22,6 +22,15 @@ class RefreshTokens extends Command
 
     public function handle()
     {
-        Profile::all()->filter->hasInstagramAccess()->each->refreshToken();
+        $profile = Profile::where('username', $this->argument('username'))->get()
+            ->filter->hasInstagramAccess()
+            ->first();
+
+        if (! $profile) {
+            $this->warn('This profile does not exist or access token is expired');
+            return;
+        }
+
+        $profile->refreshToken();
     }
 }

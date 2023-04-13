@@ -3,7 +3,6 @@
 
 namespace GNAHotelSolutions\InstagramFeed;
 
-
 use GNAHotelSolutions\InstagramFeed\Exceptions\BadTokenException;
 use GNAHotelSolutions\InstagramFeed\Exceptions\HttpException;
 use GuzzleHttp\Exception\ClientException;
@@ -87,7 +86,7 @@ class Instagram
         $url = sprintf(
             self::MEDIA_URL_FORMAT,
             $token->user_id,
-            self::MEDIA_FIELDS,
+            urldecode(self::MEDIA_FIELDS),
             $this->getPageSize($limit),
             $token->access_code
         );

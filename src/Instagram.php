@@ -5,13 +5,12 @@ namespace GNAHotelSolutions\InstagramFeed;
 
 use GNAHotelSolutions\InstagramFeed\Exceptions\BadTokenException;
 use GNAHotelSolutions\InstagramFeed\Exceptions\HttpException;
-use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Config;
 
 class Instagram
 {
     const REQUEST_ACCESS_TOKEN_URL = "https://api.instagram.com/oauth/access_token";
-    const GRAPH_USER_INFO_FORMAT = "https://graph.instagram.com/%s?fields=id,username&access_token=%s";
+    const GRAPH_USER_INFO_FORMAT = "https://graph.instagram.com/v22.0/me?fields=id,media_count,username&access_token=%s";
     const EXCHANGE_TOKEN_FORMAT = "https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=%s&access_token=%s";
     const REFRESH_TOKEN_FORMAT = "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=%s";
     const MEDIA_URL_FORMAT = "https://graph.instagram.com/%s/media?fields=%s&limit=%s&access_token=%s";
@@ -33,8 +32,17 @@ class Instagram
     {
         $client_id = $this->client_id;
         $redirect = $this->redirectUriForProfile($profile->id);
+        $scopes = ['instagram_business_basic'];
+ 
+        $parameters = [
+            'client_id' => $client_id,
+            'redirect_uri' => $redirect,
+            'response_type' => 'code',
+            'scope' => urlencode(implode(',', $scopes)),
+            'state' => $profile->identity_token,
+        ];
 
-        return "https://api.instagram.com/oauth/authorize/?client_id=$client_id&redirect_uri=$redirect&scope=user_profile,user_media&response_type=code&state={$profile->identity_token}";
+        return 'https://www.instagram.com/oauth/authorize/?' . http_build_query($parameters);
     }
 
     private function redirectUriForProfile($profile_id)
@@ -58,7 +66,7 @@ class Instagram
 
     public function fetchUserDetails($access_token)
     {
-        $url = sprintf(self::GRAPH_USER_INFO_FORMAT, $access_token['user_id'], $access_token['access_token']);
+        $url = sprintf(self::GRAPH_USER_INFO_FORMAT, $access_token['access_token'] ?? $access_token['access_code']);
         return SimpleClient::get($url);
     }
 
